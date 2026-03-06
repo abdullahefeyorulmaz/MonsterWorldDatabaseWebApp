@@ -1,0 +1,192 @@
+/* =========================================
+   MONSTER DB - GLOBAL DARK THEME CSS
+   ========================================= */
+
+:root {
+    /* Renk Paleti - Dark Mode */
+    --bg-dark: #121212; /* Ana Arka Plan */
+    --card-bg: #1e1e2d; /* Kart Arka Planý */
+    --primary-color: #3699ff; /* Ana Renk (Mavi) */
+    --secondary-color: #7E8299; /* Ýkincil Renk (Gri) */
+    --danger-color: #F64E60; /* Silme/Hata Rengi (Kýrmýzý) */
+    --success-color: #1BC5BD; /* Baþarýlý Rengi (Yeþil) */
+    --text-main: #ffffff; /* Ana Yazý Rengi */
+    --text-secondary: #b5b5c3; /* Yan Yazý Rengi */
+    --border-color: #323248; /* Çizgi Rengi */
+}
+
+/* Genel Sayfa Ayarlarý */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Sayfa Konteyner (Ortalama ve Boþluk) */
+.page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Baþlýk Stili */
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+/* Kart Yapýsý (Siyah/Gri Kutular) */
+.ability-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+}
+
+/* Tablo / Grid Ayarlarý (QuickGrid Uyumlu) */
+.grid-wrapper {
+    overflow-x: auto; /* Mobilde taþarsa kaydýr */
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text-secondary);
+}
+
+    .table th {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 2px solid var(--border-color);
+        color: var(--text-main);
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.05); /* Baþlýklar hafif açýk */
+    }
+
+    .table td {
+        padding: 12px;
+        border-bottom: 1px solid var(--border-color);
+        vertical-align: middle;
+    }
+
+    .table tr:hover {
+        background-color: rgba(255, 255, 255, 0.02); /* Üzerine gelince hafif parlasýn */
+    }
+
+/* Buton ve Link Tasarýmlarý */
+.action-links {
+    display: flex;
+    gap: 15px;
+}
+
+    .action-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--primary-color);
+        transition: color 0.2s;
+    }
+
+        .action-links a:hover {
+            color: #69b3ff;
+            text-decoration: underline;
+        }
+
+.btn-action {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+    .btn-primary:hover {
+        background-color: #267fd3;
+    }
+
+.btn-secondary {
+    background-color: var(--border-color);
+    color: var(--text-secondary) !important;
+}
+
+    .btn-secondary:hover {
+        background-color: #4a4a63;
+        color: white !important;
+    }
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white !important;
+}
+
+    .btn-danger:hover {
+        background-color: #d13646;
+    }
+
+/* Form Elemanlarý (Inputlar) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: #121212; /* Input içi koyu olsun */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 1rem;
+    box-sizing: border-box; /* Taþmalarý engeller */
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(54, 153, 255, 0.15);
+    }
+
+    /* Input placeholder rengi */
+    .form-control::placeholder {
+        color: #555;
+    }
+
+/* Detay Sayfasý Listesi */
+.details-list {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Sol taraf etiket, sað taraf deðer */
+    gap: 15px;
+    max-width: 600px;
+    align-items: center;
+}
+
+.details-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.details-value {
+    color: var(--text-main);
+    word-break: break-word;
+    font-size: 1.1rem;
+}

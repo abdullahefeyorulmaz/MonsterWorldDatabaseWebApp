@@ -1,0 +1,51 @@
+﻿@page "/abilities/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Ability Details</h1>
+
+    @if (ability is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">Name</div>
+                <div class="details-value">@ability.Name</div>
+
+                <div class="details-label">Description</div>
+                <div class="details-value">@ability.Description</div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/abilities/edit?id={ability.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/abilities" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private Ability? ability;
+
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        ability = await context.Ability.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (ability is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

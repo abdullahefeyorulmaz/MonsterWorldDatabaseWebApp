@@ -1,0 +1,57 @@
+﻿@page "/habitats/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Habitat Details</h1>
+
+    @if (Habitat is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@Habitat.ID</div>
+
+                <div class="details-label">Habitat Name</div>
+                <div class="details-value">@Habitat.Habitat_Name</div>
+
+                <div class="details-label">Region</div>
+                <div class="details-value">@Habitat.Region</div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/habitats/edit?id={Habitat.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/habitats" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Habitat? Habitat { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Habitat = await context.Habitat.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Habitat is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

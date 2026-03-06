@@ -1,0 +1,101 @@
+﻿@page "/loots/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Loot</h1>
+
+    @if (Loot is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="Loot" OnValidSubmit="UpdateLoot">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@Loot.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Loot Name:</label>
+                    <InputText id="name" @bind-Value="Loot.Loot_Name" class="form-control" />
+                    <ValidationMessage For="() => Loot.Loot_Name" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label for="rarity" class="form-label">Rarity:</label>
+                    <InputText id="rarity" @bind-Value="Loot.Rarity" class="form-control" />
+                    <ValidationMessage For="() => Loot.Rarity" class="text-danger" />
+                    <small style="color:var(--text-secondary);">
+                        Valid Values: Common, Rare, Epic, Legendary
+                    </small>
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/loots" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Loot? Loot { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Loot = await context.Loot.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Loot is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateLoot()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Loot!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!LootExists(Loot!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/loots");
+    }
+
+    private bool LootExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Loot.Any(e => e.ID == id);
+    }
+}

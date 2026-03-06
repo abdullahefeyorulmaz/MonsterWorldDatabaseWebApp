@@ -1,0 +1,74 @@
+﻿@page "/monster_abilities/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Yeni Yetenek Ata</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Canavara Yetenek Ata</h1>
+    <p style="color:var(--text-secondary)">Hangi canavar hangi yeteneği kullansın?</p>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="MonsterAbility" OnValidSubmit="AddMonsterAbility">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label class="form-label">Canavar:</label>
+                <InputSelect @bind-Value="MonsterAbility.Monster_ID" class="form-control">
+                    <option value="0">-- Canavar Seç --</option>
+                    @foreach (var m in MonstersList)
+                    {
+                        <option value="@m.ID">@m.Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => MonsterAbility.Monster_ID" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Yetenek (Ability):</label>
+                <InputSelect @bind-Value="MonsterAbility.Ability_ID" class="form-control">
+                    <option value="0">-- Yetenek Seç --</option>
+                    @foreach (var a in AbilitiesList)
+                    {
+                        <option value="@a.ID">@a.Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => MonsterAbility.Ability_ID" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Oluştur</button>
+                <a href="/monster_abilities" class="btn-action btn-secondary">İptal</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Monster_Abilities MonsterAbility { get; set; } = new();
+    private List<Monster> MonstersList = new();
+    private List<Ability> AbilitiesList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        MonstersList = await context.Monster.OrderBy(m => m.Name).ToListAsync();
+
+        // --- DÜZELTME BURADA YAPILDI (Abilities -> Ability) ---
+        AbilitiesList = await context.Ability.OrderBy(a => a.Name).ToListAsync();
+    }
+
+    private async Task AddMonsterAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Monster_Abilities.Add(MonsterAbility);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/monster_abilities");
+    }
+}

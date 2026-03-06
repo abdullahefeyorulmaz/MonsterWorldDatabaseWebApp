@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MonsterDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Ability">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Damage_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_Name" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Habitat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Habitat_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Loot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Loot_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Rarity" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Monster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Challenge_Rating" Type="decimal" Precision="3" Scale="1" Nullable="false" />
+          <Property Name="Monster_Type_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monster_Abilities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Monster_ID" Type="int" Nullable="false" />
+          <Property Name="Ability_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monster_Habitat_Loot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Monster_ID" Type="int" Nullable="false" />
+          <Property Name="Habitat_ID" Type="int" Nullable="false" />
+          <Property Name="Loot_ID" Type="int" Nullable="false" />
+          <Property Name="Drop_Rate" Type="decimal" Precision="4" Scale="2" />
+        </EntityType>
+        <EntityType Name="Monster_Resistances">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Monster_ID" Type="int" Nullable="false" />
+          <Property Name="DamageType_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monster_Traits">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Monster_ID" Type="int" Nullable="false" />
+          <Property Name="Trait_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monster_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Monster_Weaknesses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Monster_ID" Type="int" Nullable="false" />
+          <Property Name="DamageType_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Trait">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Trait_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Monster__Monster__7B5B524B">
+          <End Role="Monster_Type" Type="Self.Monster_Type" Multiplicity="1" />
+          <End Role="Monster" Type="Self.Monster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster">
+              <PropertyRef Name="Monster_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_A__Abili__02084FDA">
+          <End Role="Ability" Type="Self.Ability" Multiplicity="1" />
+          <End Role="Monster_Abilities" Type="Self.Monster_Abilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ability">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Abilities">
+              <PropertyRef Name="Ability_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_A__Monst__01142BA1">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Abilities" Type="Self.Monster_Abilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Abilities">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Habit__2180FB33">
+          <End Role="Habitat" Type="Self.Habitat" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Habitat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Loot___22751F6C">
+          <End Role="Loot" Type="Self.Loot" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loot">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Loot_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Monst__208CD6FA">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_R__Damag__160F4887">
+          <End Role="Damage_Type" Type="Self.Damage_Type" Multiplicity="1" />
+          <End Role="Monster_Resistances" Type="Self.Monster_Resistances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Resistances">
+              <PropertyRef Name="DamageType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_R__Monst__151B244E">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Resistances" Type="Self.Monster_Resistances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Resistances">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_T__Monst__08B54D69">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Traits" Type="Self.Monster_Traits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Traits">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_T__Trait__09A971A2">
+          <End Role="Trait" Type="Self.Trait" Multiplicity="1" />
+          <End Role="Monster_Traits" Type="Self.Monster_Traits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trait">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Traits">
+              <PropertyRef Name="Trait_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_W__Damag__114A936A">
+          <End Role="Damage_Type" Type="Self.Damage_Type" Multiplicity="1" />
+          <End Role="Monster_Weaknesses" Type="Self.Monster_Weaknesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Weaknesses">
+              <PropertyRef Name="DamageType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_W__Monst__10566F31">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Weaknesses" Type="Self.Monster_Weaknesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Weaknesses">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MonsterDBModelStoreContainer">
+          <EntitySet Name="Ability" EntityType="Self.Ability" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Damage_Type" EntityType="Self.Damage_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Habitat" EntityType="Self.Habitat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loot" EntityType="Self.Loot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster" EntityType="Self.Monster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Abilities" EntityType="Self.Monster_Abilities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Habitat_Loot" EntityType="Self.Monster_Habitat_Loot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Resistances" EntityType="Self.Monster_Resistances" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Traits" EntityType="Self.Monster_Traits" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Type" EntityType="Self.Monster_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster_Weaknesses" EntityType="Self.Monster_Weaknesses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trait" EntityType="Self.Trait" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Monster__Monster__7B5B524B" Association="Self.FK__Monster__Monster__7B5B524B">
+            <End Role="Monster_Type" EntitySet="Monster_Type" />
+            <End Role="Monster" EntitySet="Monster" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_A__Abili__02084FDA" Association="Self.FK__Monster_A__Abili__02084FDA">
+            <End Role="Ability" EntitySet="Ability" />
+            <End Role="Monster_Abilities" EntitySet="Monster_Abilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_A__Monst__01142BA1" Association="Self.FK__Monster_A__Monst__01142BA1">
+            <End Role="Monster" EntitySet="Monster" />
+            <End Role="Monster_Abilities" EntitySet="Monster_Abilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Habit__2180FB33" Association="Self.FK__Monster_H__Habit__2180FB33">
+            <End Role="Habitat" EntitySet="Habitat" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Loot___22751F6C" Association="Self.FK__Monster_H__Loot___22751F6C">
+            <End Role="Loot" EntitySet="Loot" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Monst__208CD6FA" Association="Self.FK__Monster_H__Monst__208CD6FA">
+            <End Role="Monster" EntitySet="Monster" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_R__Damag__160F4887" Association="Self.FK__Monster_R__Damag__160F4887">
+            <End Role="Damage_Type" EntitySet="Damage_Type" />
+            <End Role="Monster_Resistances" EntitySet="Monster_Resistances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_R__Monst__151B244E" Association="Self.FK__Monster_R__Monst__151B244E">
+            <End Role="Monster" EntitySet="Monster" />
+            <End Role="Monster_Resistances" EntitySet="Monster_Resistances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_T__Monst__08B54D69" Association="Self.FK__Monster_T__Monst__08B54D69">
+            <End Role="Monster" EntitySet="Monster" />
+            <End Role="Monster_Traits" EntitySet="Monster_Traits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_T__Trait__09A971A2" Association="Self.FK__Monster_T__Trait__09A971A2">
+            <End Role="Trait" EntitySet="Trait" />
+            <End Role="Monster_Traits" EntitySet="Monster_Traits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_W__Damag__114A936A" Association="Self.FK__Monster_W__Damag__114A936A">
+            <End Role="Damage_Type" EntitySet="Damage_Type" />
+            <End Role="Monster_Weaknesses" EntitySet="Monster_Weaknesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_W__Monst__10566F31" Association="Self.FK__Monster_W__Monst__10566F31">
+            <End Role="Monster" EntitySet="Monster" />
+            <End Role="Monster_Weaknesses" EntitySet="Monster_Weaknesses" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MonsterDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Ability">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Monster_Abilities" Relationship="Self.FK__Monster_A__Abili__02084FDA" FromRole="Ability" ToRole="Monster_Abilities" />
+        </EntityType>
+        <EntityType Name="Damage_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Monster_Resistances" Relationship="Self.FK__Monster_R__Damag__160F4887" FromRole="Damage_Type" ToRole="Monster_Resistances" />
+          <NavigationProperty Name="Monster_Weaknesses" Relationship="Self.FK__Monster_W__Damag__114A936A" FromRole="Damage_Type" ToRole="Monster_Weaknesses" />
+        </EntityType>
+        <EntityType Name="Habitat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Habitat_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Monster_Habitat_Loot" Relationship="Self.FK__Monster_H__Habit__2180FB33" FromRole="Habitat" ToRole="Monster_Habitat_Loot" />
+        </EntityType>
+        <EntityType Name="Loot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Loot_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rarity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Monster_Habitat_Loot" Relationship="Self.FK__Monster_H__Loot___22751F6C" FromRole="Loot" ToRole="Monster_Habitat_Loot" />
+        </EntityType>
+        <EntityType Name="Monster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Challenge_Rating" Type="Decimal" Precision="3" Scale="1" Nullable="false" />
+          <Property Name="Monster_Type_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Monster_Type" Relationship="Self.FK__Monster__Monster__7B5B524B" FromRole="Monster" ToRole="Monster_Type" />
+          <NavigationProperty Name="Monster_Abilities" Relationship="Self.FK__Monster_A__Monst__01142BA1" FromRole="Monster" ToRole="Monster_Abilities" />
+          <NavigationProperty Name="Monster_Habitat_Loot" Relationship="Self.FK__Monster_H__Monst__208CD6FA" FromRole="Monster" ToRole="Monster_Habitat_Loot" />
+          <NavigationProperty Name="Monster_Resistances" Relationship="Self.FK__Monster_R__Monst__151B244E" FromRole="Monster" ToRole="Monster_Resistances" />
+          <NavigationProperty Name="Monster_Traits" Relationship="Self.FK__Monster_T__Monst__08B54D69" FromRole="Monster" ToRole="Monster_Traits" />
+          <NavigationProperty Name="Monster_Weaknesses" Relationship="Self.FK__Monster_W__Monst__10566F31" FromRole="Monster" ToRole="Monster_Weaknesses" />
+        </EntityType>
+        <EntityType Name="Monster_Abilities">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Monster_ID" Type="Int32" Nullable="false" />
+          <Property Name="Ability_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Ability" Relationship="Self.FK__Monster_A__Abili__02084FDA" FromRole="Monster_Abilities" ToRole="Ability" />
+          <NavigationProperty Name="Monster" Relationship="Self.FK__Monster_A__Monst__01142BA1" FromRole="Monster_Abilities" ToRole="Monster" />
+        </EntityType>
+        <EntityType Name="Monster_Habitat_Loot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Monster_ID" Type="Int32" Nullable="false" />
+          <Property Name="Habitat_ID" Type="Int32" Nullable="false" />
+          <Property Name="Loot_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drop_Rate" Type="Decimal" Precision="4" Scale="2" />
+          <NavigationProperty Name="Habitat" Relationship="Self.FK__Monster_H__Habit__2180FB33" FromRole="Monster_Habitat_Loot" ToRole="Habitat" />
+          <NavigationProperty Name="Loot" Relationship="Self.FK__Monster_H__Loot___22751F6C" FromRole="Monster_Habitat_Loot" ToRole="Loot" />
+          <NavigationProperty Name="Monster" Relationship="Self.FK__Monster_H__Monst__208CD6FA" FromRole="Monster_Habitat_Loot" ToRole="Monster" />
+        </EntityType>
+        <EntityType Name="Monster_Resistances">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Monster_ID" Type="Int32" Nullable="false" />
+          <Property Name="DamageType_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Damage_Type" Relationship="Self.FK__Monster_R__Damag__160F4887" FromRole="Monster_Resistances" ToRole="Damage_Type" />
+          <NavigationProperty Name="Monster" Relationship="Self.FK__Monster_R__Monst__151B244E" FromRole="Monster_Resistances" ToRole="Monster" />
+        </EntityType>
+        <EntityType Name="Monster_Traits">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Monster_ID" Type="Int32" Nullable="false" />
+          <Property Name="Trait_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Monster" Relationship="Self.FK__Monster_T__Monst__08B54D69" FromRole="Monster_Traits" ToRole="Monster" />
+          <NavigationProperty Name="Trait" Relationship="Self.FK__Monster_T__Trait__09A971A2" FromRole="Monster_Traits" ToRole="Trait" />
+        </EntityType>
+        <EntityType Name="Monster_Type">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Monsters" Relationship="Self.FK__Monster__Monster__7B5B524B" FromRole="Monster_Type" ToRole="Monster" />
+        </EntityType>
+        <EntityType Name="Monster_Weaknesses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Monster_ID" Type="Int32" Nullable="false" />
+          <Property Name="DamageType_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Damage_Type" Relationship="Self.FK__Monster_W__Damag__114A936A" FromRole="Monster_Weaknesses" ToRole="Damage_Type" />
+          <NavigationProperty Name="Monster" Relationship="Self.FK__Monster_W__Monst__10566F31" FromRole="Monster_Weaknesses" ToRole="Monster" />
+        </EntityType>
+        <EntityType Name="Trait">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Trait_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Monster_Traits" Relationship="Self.FK__Monster_T__Trait__09A971A2" FromRole="Trait" ToRole="Monster_Traits" />
+        </EntityType>
+        <Association Name="FK__Monster_A__Abili__02084FDA">
+          <End Role="Ability" Type="Self.Ability" Multiplicity="1" />
+          <End Role="Monster_Abilities" Type="Self.Monster_Abilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ability">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Abilities">
+              <PropertyRef Name="Ability_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_R__Damag__160F4887">
+          <End Role="Damage_Type" Type="Self.Damage_Type" Multiplicity="1" />
+          <End Role="Monster_Resistances" Type="Self.Monster_Resistances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Resistances">
+              <PropertyRef Name="DamageType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_W__Damag__114A936A">
+          <End Role="Damage_Type" Type="Self.Damage_Type" Multiplicity="1" />
+          <End Role="Monster_Weaknesses" Type="Self.Monster_Weaknesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Damage_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Weaknesses">
+              <PropertyRef Name="DamageType_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Habit__2180FB33">
+          <End Role="Habitat" Type="Self.Habitat" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Habitat">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Habitat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Loot___22751F6C">
+          <End Role="Loot" Type="Self.Loot" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Loot">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Loot_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster__Monster__7B5B524B">
+          <End Role="Monster_Type" Type="Self.Monster_Type" Multiplicity="1" />
+          <End Role="Monster" Type="Self.Monster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster_Type">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster">
+              <PropertyRef Name="Monster_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_A__Monst__01142BA1">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Abilities" Type="Self.Monster_Abilities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Abilities">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_H__Monst__208CD6FA">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Habitat_Loot" Type="Self.Monster_Habitat_Loot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Habitat_Loot">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_R__Monst__151B244E">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Resistances" Type="Self.Monster_Resistances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Resistances">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_T__Monst__08B54D69">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Traits" Type="Self.Monster_Traits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Traits">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_W__Monst__10566F31">
+          <End Role="Monster" Type="Self.Monster" Multiplicity="1" />
+          <End Role="Monster_Weaknesses" Type="Self.Monster_Weaknesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Weaknesses">
+              <PropertyRef Name="Monster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Monster_T__Trait__09A971A2">
+          <End Role="Trait" Type="Self.Trait" Multiplicity="1" />
+          <End Role="Monster_Traits" Type="Self.Monster_Traits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trait">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monster_Traits">
+              <PropertyRef Name="Trait_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MonsterDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abilities" EntityType="Self.Ability" />
+          <EntitySet Name="Damage_Type" EntityType="Self.Damage_Type" />
+          <EntitySet Name="Habitats" EntityType="Self.Habitat" />
+          <EntitySet Name="Loots" EntityType="Self.Loot" />
+          <EntitySet Name="Monsters" EntityType="Self.Monster" />
+          <EntitySet Name="Monster_Abilities" EntityType="Self.Monster_Abilities" />
+          <EntitySet Name="Monster_Habitat_Loot" EntityType="Self.Monster_Habitat_Loot" />
+          <EntitySet Name="Monster_Resistances" EntityType="Self.Monster_Resistances" />
+          <EntitySet Name="Monster_Traits" EntityType="Self.Monster_Traits" />
+          <EntitySet Name="Monster_Type" EntityType="Self.Monster_Type" />
+          <EntitySet Name="Monster_Weaknesses" EntityType="Self.Monster_Weaknesses" />
+          <EntitySet Name="Traits" EntityType="Self.Trait" />
+          <AssociationSet Name="FK__Monster_A__Abili__02084FDA" Association="Self.FK__Monster_A__Abili__02084FDA">
+            <End Role="Ability" EntitySet="Abilities" />
+            <End Role="Monster_Abilities" EntitySet="Monster_Abilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_R__Damag__160F4887" Association="Self.FK__Monster_R__Damag__160F4887">
+            <End Role="Damage_Type" EntitySet="Damage_Type" />
+            <End Role="Monster_Resistances" EntitySet="Monster_Resistances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_W__Damag__114A936A" Association="Self.FK__Monster_W__Damag__114A936A">
+            <End Role="Damage_Type" EntitySet="Damage_Type" />
+            <End Role="Monster_Weaknesses" EntitySet="Monster_Weaknesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Habit__2180FB33" Association="Self.FK__Monster_H__Habit__2180FB33">
+            <End Role="Habitat" EntitySet="Habitats" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Loot___22751F6C" Association="Self.FK__Monster_H__Loot___22751F6C">
+            <End Role="Loot" EntitySet="Loots" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster__Monster__7B5B524B" Association="Self.FK__Monster__Monster__7B5B524B">
+            <End Role="Monster_Type" EntitySet="Monster_Type" />
+            <End Role="Monster" EntitySet="Monsters" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_A__Monst__01142BA1" Association="Self.FK__Monster_A__Monst__01142BA1">
+            <End Role="Monster" EntitySet="Monsters" />
+            <End Role="Monster_Abilities" EntitySet="Monster_Abilities" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_H__Monst__208CD6FA" Association="Self.FK__Monster_H__Monst__208CD6FA">
+            <End Role="Monster" EntitySet="Monsters" />
+            <End Role="Monster_Habitat_Loot" EntitySet="Monster_Habitat_Loot" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_R__Monst__151B244E" Association="Self.FK__Monster_R__Monst__151B244E">
+            <End Role="Monster" EntitySet="Monsters" />
+            <End Role="Monster_Resistances" EntitySet="Monster_Resistances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_T__Monst__08B54D69" Association="Self.FK__Monster_T__Monst__08B54D69">
+            <End Role="Monster" EntitySet="Monsters" />
+            <End Role="Monster_Traits" EntitySet="Monster_Traits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_W__Monst__10566F31" Association="Self.FK__Monster_W__Monst__10566F31">
+            <End Role="Monster" EntitySet="Monsters" />
+            <End Role="Monster_Weaknesses" EntitySet="Monster_Weaknesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Monster_T__Trait__09A971A2" Association="Self.FK__Monster_T__Trait__09A971A2">
+            <End Role="Trait" EntitySet="Traits" />
+            <End Role="Monster_Traits" EntitySet="Monster_Traits" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MonsterDBModelStoreContainer" CdmEntityContainer="MonsterDBEntities">
+          <EntitySetMapping Name="Abilities">
+            <EntityTypeMapping TypeName="MonsterDBModel.Ability">
+              <MappingFragment StoreEntitySet="Ability">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Damage_Type">
+            <EntityTypeMapping TypeName="MonsterDBModel.Damage_Type">
+              <MappingFragment StoreEntitySet="Damage_Type">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Habitats">
+            <EntityTypeMapping TypeName="MonsterDBModel.Habitat">
+              <MappingFragment StoreEntitySet="Habitat">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Habitat_Name" ColumnName="Habitat_Name" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loots">
+            <EntityTypeMapping TypeName="MonsterDBModel.Loot">
+              <MappingFragment StoreEntitySet="Loot">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Loot_Name" ColumnName="Loot_Name" />
+                <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monsters">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster">
+              <MappingFragment StoreEntitySet="Monster">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Challenge_Rating" ColumnName="Challenge_Rating" />
+                <ScalarProperty Name="Monster_Type_ID" ColumnName="Monster_Type_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Abilities">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Abilities">
+              <MappingFragment StoreEntitySet="Monster_Abilities">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+                <ScalarProperty Name="Ability_ID" ColumnName="Ability_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Habitat_Loot">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Habitat_Loot">
+              <MappingFragment StoreEntitySet="Monster_Habitat_Loot">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+                <ScalarProperty Name="Habitat_ID" ColumnName="Habitat_ID" />
+                <ScalarProperty Name="Loot_ID" ColumnName="Loot_ID" />
+                <ScalarProperty Name="Drop_Rate" ColumnName="Drop_Rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Resistances">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Resistances">
+              <MappingFragment StoreEntitySet="Monster_Resistances">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+                <ScalarProperty Name="DamageType_ID" ColumnName="DamageType_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Traits">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Traits">
+              <MappingFragment StoreEntitySet="Monster_Traits">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+                <ScalarProperty Name="Trait_ID" ColumnName="Trait_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Type">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Type">
+              <MappingFragment StoreEntitySet="Monster_Type">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monster_Weaknesses">
+            <EntityTypeMapping TypeName="MonsterDBModel.Monster_Weaknesses">
+              <MappingFragment StoreEntitySet="Monster_Weaknesses">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+                <ScalarProperty Name="DamageType_ID" ColumnName="DamageType_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Traits">
+            <EntityTypeMapping TypeName="MonsterDBModel.Trait">
+              <MappingFragment StoreEntitySet="Trait">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Trait_Name" ColumnName="Trait_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

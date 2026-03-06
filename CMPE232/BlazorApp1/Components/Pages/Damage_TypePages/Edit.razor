@@ -1,0 +1,92 @@
+﻿@page "/damage_types/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Damage Type</h1>
+
+    @if (DamageType is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="DamageType" OnValidSubmit="UpdateDamageType">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@DamageType.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+
+                <div class="form-group">
+                    <label for="type_name" class="form-label">Type Name:</label>
+                    <InputText id="type_name" @bind-Value="DamageType.Type_Name" class="form-control" />
+                    <ValidationMessage For="() => DamageType.Type_Name" class="text-danger" />
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/damage_types" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Damage_Type? DamageType { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        DamageType = await context.Damage_Type.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (DamageType is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateDamageType()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(DamageType!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!DamageTypeExists(DamageType!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/damage_types");
+    }
+
+    private bool DamageTypeExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Damage_Type.Any(e => e.ID == id);
+    }
+}

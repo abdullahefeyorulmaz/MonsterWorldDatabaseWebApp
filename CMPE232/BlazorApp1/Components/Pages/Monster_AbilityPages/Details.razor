@@ -1,0 +1,63 @@
+﻿@page "/monster_abilities/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Assignment Details</h1>
+
+    @if (MonsterAbility is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@MonsterAbility.ID</div>
+
+                <div class="details-label">Monster</div>
+                <div class="details-value">@MonsterAbility.Monster?.Name</div>
+
+                <div class="details-label">Ability</div>
+                <div class="details-value" style="font-weight:bold; color:var(--primary-color)">
+                    @MonsterAbility.Ability?.Name
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/monster_abilities/edit?id={MonsterAbility.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/monster_abilities" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster_Abilities? MonsterAbility { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        MonsterAbility = await context.Monster_Abilities
+            .Include(m => m.Monster)
+            .Include(a => a.Ability)
+            .FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (MonsterAbility is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

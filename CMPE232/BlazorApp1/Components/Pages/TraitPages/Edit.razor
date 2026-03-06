@@ -1,0 +1,92 @@
+﻿@page "/traits/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Trait</h1>
+
+    @if (Trait is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="Trait" OnValidSubmit="UpdateTrait">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@Trait.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+
+                <div class="form-group">
+                    <label for="trait_name" class="form-label">Trait Name:</label>
+                    <InputText id="trait_name" @bind-Value="Trait.Trait_Name" class="form-control" />
+                    <ValidationMessage For="() => Trait.Trait_Name" class="text-danger" />
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/traits" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Trait? Trait { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Trait = await context.Trait.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Trait is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateTrait()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Trait!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!TraitExists(Trait!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/traits");
+    }
+
+    private bool TraitExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Trait.Any(e => e.ID == id);
+    }
+}

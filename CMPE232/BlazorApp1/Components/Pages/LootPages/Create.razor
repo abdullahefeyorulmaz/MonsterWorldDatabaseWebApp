@@ -1,0 +1,53 @@
+﻿@page "/loots/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Loot</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Loot</h1>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="Loot" OnValidSubmit="AddLoot">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="name" class="form-label">Loot Name:</label>
+                <InputText id="name" @bind-Value="Loot.Loot_Name" class="form-control" placeholder="Ex: Dragon Scale" />
+                <ValidationMessage For="() => Loot.Loot_Name" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label for="rarity" class="form-label">Rarity:</label>
+                <InputText id="rarity" @bind-Value="Loot.Rarity" class="form-control" placeholder="Common, Rare, Epic, Legendary" />
+                <ValidationMessage For="() => Loot.Rarity" class="text-danger" />
+                <small style="color:var(--text-secondary); display:block; margin-top:5px;">
+                    Valid Values: Common, Rare, Epic, Legendary
+                </small>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/loots" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Loot Loot { get; set; } = new();
+
+    private async Task AddLoot()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Loot.Add(Loot);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/loots");
+    }
+}

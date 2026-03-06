@@ -1,0 +1,1291 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pc\\source\\repos\\CMPE232\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\classlibrary1\\monster_traits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster_traits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\monster_abilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster_abilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\abilitypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\abilitypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\monster_weaknesses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster_weaknesses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\monster_resistances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster_resistances.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\monster_habitat_loot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster_habitat_loot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\damage_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\damage_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_traitpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_traitpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_traitpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_traitpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_traitpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_traitpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_traitpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_traitpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_traitpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_traitpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\data\\blazorapp1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\data\\blazorapp1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_abilitypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_abilitypages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_abilitypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_abilitypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_abilitypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_abilitypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_abilitypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_abilitypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_abilitypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_abilitypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_weaknessespages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_weaknessespages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_weaknessespages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_weaknessespages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_weaknessespages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_weaknessespages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_weaknessespages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_weaknessespages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_weaknessespages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_weaknessespages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_resistancespages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_resistancespages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_resistancespages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_resistancespages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_resistancespages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_resistancespages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_resistancespages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_resistancespages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_resistancespages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_resistancespages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_habitat_lootpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_habitat_lootpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_habitat_lootpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_habitat_lootpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_habitat_lootpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_habitat_lootpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_habitat_lootpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_habitat_lootpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_habitat_lootpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_habitat_lootpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\traitpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\traitpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\traitpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\traitpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\traitpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\traitpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\traitpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\traitpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\traitpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\traitpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monsterpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monsterpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monsterpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monsterpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monsterpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monsterpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monsterpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monsterpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monsterpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monsterpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_typepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_typepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_typepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_typepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_typepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_typepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_typepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_typepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\monster_typepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\monster_typepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\lootpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\lootpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\lootpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\lootpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\lootpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\lootpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\lootpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\lootpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\lootpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\lootpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\habitatpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\habitatpages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\habitatpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\habitatpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\habitatpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\habitatpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\habitatpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\habitatpages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\habitatpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\habitatpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\damage_typepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\damage_typepages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\damage_typepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\damage_typepages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\damage_typepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\damage_typepages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\damage_typepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\damage_typepages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\damage_typepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\damage_typepages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\abilitypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\abilitypages\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\abilitypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\abilitypages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\abilitypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\abilitypages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\components\\pages\\abilitypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\abilitypages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\trait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\trait.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\loot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\loot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\habitat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\habitat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\ability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\ability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\pc\\source\\repos\\cmpe232\\blazorapp1\\blazorapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{27AA71F8-D3F7-4929-B091-DE4BEF5F0FA3}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\blazorapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|C:\\Users\\Pc\\source\\repos\\CMPE232\\classlibrary1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4448CCCD-CCC8-4228-9101-29C6C4FF0FF3}|ClassLibrary1\\ClassLibrary1.csproj|solutionrelative:classlibrary1\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Monster_Traits.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Traits.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster_Traits.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Traits.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster_Traits.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T18:47:36.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Damage_Type.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Damage_Type.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Damage_Type.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Damage_Type.cs",
+              "RelativeToolTip": "ClassLibrary1\\Damage_Type.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:55:57.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Monster_Habitat_Loot.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Habitat_Loot.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster_Habitat_Loot.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Habitat_Loot.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster_Habitat_Loot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:35:26.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Monster_Resistances.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Resistances.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster_Resistances.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Resistances.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster_Resistances.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:51:21.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Monster_Weaknesses.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Weaknesses.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster_Weaknesses.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Weaknesses.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster_Weaknesses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:15:40.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:41:39.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\AbilityPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\AbilityPages\\Edit.razor",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:13:12.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Monster_Abilities.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Abilities.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster_Abilities.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster_Abilities.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster_Abilities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T22:18:48.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Monster.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Monster.cs",
+              "RelativeToolTip": "ClassLibrary1\\Monster.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:21:01.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BlazorApp1Context.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Data\\BlazorApp1Context.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Data\\BlazorApp1Context.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Data\\BlazorApp1Context.cs",
+              "RelativeToolTip": "BlazorApp1\\Data\\BlazorApp1Context.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:34:52.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Create.razor",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvzMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:01:24.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Edit.razor",
+              "ViewState": "AgIAADAAAAAAAAAAAADwv0YAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:01:34.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Delete.razor",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:01:45.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:07:36.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Create.razor",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvzsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:07:46.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Delete.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvzQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:08:05.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Edit.razor",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv1wAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:07:55.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TraitPages\\Details.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:08:16.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Details.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:01:58.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_AbilityPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-25T18:01:01.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:15:51.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Create.razor",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:05:01.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Edit.razor",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:16:09.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Details.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:16:18.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_WeaknessesPages\\Delete.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:16:26.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "BlazorApp1\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\wwwroot\\app.css",
+              "RelativeToolTip": "BlazorApp1\\wwwroot\\app.css",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAQwK8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-23T23:07:41.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Model1.edmx",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Model1.edmx",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "ClassLibrary1\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-12-23T22:59:47.146Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Delete.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwDEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:06:13.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Details.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAAAwwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:06:04.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Edit.razor",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwFUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:05:55.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Create.razor",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:06:45.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_ResistancesPages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:51:31.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Index.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwCAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:40:00.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Delete.razor",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwDkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:40:37.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Details.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwDoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:40:29.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Create.razor",
+              "ViewState": "AgIAADcAAAAAAAAAAAAwwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:05:29.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_Habitat_LootPages\\Edit.razor",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAwwHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:40:20.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\TraitPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\TraitPages\\Delete.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:31:30.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\TraitPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\TraitPages\\Details.razor",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:31:23.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\TraitPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\TraitPages\\Edit.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwE0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:31:14.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\TraitPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\TraitPages\\Index.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:30:56.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\TraitPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\TraitPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\TraitPages\\Create.razor",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwB8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:04:27.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\MonsterPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\MonsterPages\\Delete.razor",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwC0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:19:35.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\MonsterPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\MonsterPages\\Details.razor",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwCwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:19:25.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\MonsterPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\MonsterPages\\Edit.razor",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAwwFoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:19:16.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\MonsterPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\MonsterPages\\Index.razor",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwB8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T16:18:57.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\MonsterPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\MonsterPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\MonsterPages\\Create.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwC0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:03:38.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Delete.razor",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:52:06.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Details.razor",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:52:23.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Edit.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwE8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:51:57.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Create.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:05:56.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Monster_TypePages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Monster_TypePages\\Index.razor",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwB0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:52:30.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\LootPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\LootPages\\Delete.razor",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:24:09.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\LootPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\LootPages\\Details.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwCwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:24:00.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\LootPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\LootPages\\Edit.razor",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:23:51.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\LootPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\LootPages\\Create.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwDQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:04:04.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\LootPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\LootPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\LootPages\\Index.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:23:31.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HabitatPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HabitatPages\\Delete.razor",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwDYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:18:31.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HabitatPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HabitatPages\\Details.razor",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwCgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:18:43.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HabitatPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HabitatPages\\Edit.razor",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwFcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:18:44.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HabitatPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HabitatPages\\Create.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:03:11.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\HabitatPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\HabitatPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\HabitatPages\\Index.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwB0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:18:14.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Index.razor",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBgAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:56:15.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Edit.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Edit.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Edit.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Edit.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwE0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:56:34.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Delete.razor",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:56:54.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Create.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwB4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:06:19.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\Damage_TypePages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Damage_TypePages\\Details.razor",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:57:04.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Delete.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Delete.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\AbilityPages\\Delete.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Delete.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\AbilityPages\\Delete.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:13:36.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Details.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\AbilityPages\\Details.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Details.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\AbilityPages\\Details.razor",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:13:25.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Create.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\AbilityPages\\Create.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Create.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\AbilityPages\\Create.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:02:47.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Index.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\AbilityPages\\Index.razor",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\Components\\Pages\\AbilityPages\\Index.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\AbilityPages\\Index.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-23T23:08:07.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Trait.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Trait.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Trait.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Trait.cs",
+              "RelativeToolTip": "ClassLibrary1\\Trait.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T16:30:39.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Loot.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Loot.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Loot.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Loot.cs",
+              "RelativeToolTip": "ClassLibrary1\\Loot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:21:27.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Habitat.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Habitat.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Habitat.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Habitat.cs",
+              "RelativeToolTip": "ClassLibrary1\\Habitat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:17:56.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "BlazorApp1",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\BlazorApp1.csproj",
+              "RelativeDocumentMoniker": "BlazorApp1\\BlazorApp1.csproj",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\BlazorApp1.csproj",
+              "RelativeToolTip": "BlazorApp1\\BlazorApp1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-23T23:10:18.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Ability.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Ability.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Ability.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Ability.cs",
+              "RelativeToolTip": "ClassLibrary1\\Ability.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T23:19:16.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\appsettings.json",
+              "RelativeDocumentMoniker": "BlazorApp1\\appsettings.json",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\BlazorApp1\\appsettings.json",
+              "RelativeToolTip": "BlazorApp1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-23T23:14:52.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Class1.cs",
+              "RelativeDocumentMoniker": "ClassLibrary1\\Class1.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\CMPE232\\ClassLibrary1\\Class1.cs",
+              "RelativeToolTip": "ClassLibrary1\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T22:59:17.562Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

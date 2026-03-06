@@ -1,0 +1,54 @@
+﻿@page "/traits/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Trait Details</h1>
+
+    @if (Trait is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@Trait.ID</div>
+
+                <div class="details-label">Trait Name</div>
+                <div class="details-value">@Trait.Trait_Name</div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/traits/edit?id={Trait.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/traits" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Trait? Trait { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Trait = await context.Trait.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Trait is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

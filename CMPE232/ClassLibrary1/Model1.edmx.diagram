@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0ce2e644f1fb4ac097448ccf61a49aaa" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="MonsterDBModel.Ability" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Damage_Type" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Habitat" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Loot" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Abilities" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Habitat_Loot" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Resistances" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Traits" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Type" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Monster_Weaknesses" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MonsterDBModel.Trait" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_A__Abili__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_R__Damag__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_W__Damag__114A936A" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_H__Habit__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_H__Loot___22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster__Monster__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_A__Monst__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_H__Monst__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_R__Monst__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_T__Monst__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_W__Monst__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="MonsterDBModel.FK__Monster_T__Trait__09A971A2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

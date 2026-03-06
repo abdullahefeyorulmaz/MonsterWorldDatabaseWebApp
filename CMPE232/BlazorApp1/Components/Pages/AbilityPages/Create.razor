@@ -1,0 +1,50 @@
+﻿@page "/abilities/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Ability</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Ability</h1>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="Ability" OnValidSubmit="AddAbility">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="name" class="form-label">Name:</label>
+                <InputText id="name" @bind-Value="Ability.Name" class="form-control" />
+                <ValidationMessage For="() => Ability.Name" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="form-label">Description:</label>
+                <InputText id="description" @bind-Value="Ability.Description" class="form-control" />
+                <ValidationMessage For="() => Ability.Description" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/abilities" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Ability Ability { get; set; } = new();
+
+    private async Task AddAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Ability.Add(Ability);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/abilities");
+    }
+}

@@ -1,0 +1,104 @@
+﻿@page "/monsters/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Monster</h1>
+
+    @if (Monster is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="Monster" OnValidSubmit="UpdateMonster">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@Monster.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Monster Name:</label>
+                    <InputText id="name" @bind-Value="Monster.Name" class="form-control" />
+                    <ValidationMessage For="() => Monster.Name" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label for="challenge_rating" class="form-label">Challenge Rating (CR):</label>
+                    <InputNumber id="challenge_rating" @bind-Value="Monster.Challenge_Rating" class="form-control" />
+                    <ValidationMessage For="() => Monster.Challenge_Rating" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label for="monster_type_id" class="form-label">Type ID:</label>
+                    <InputNumber id="monster_type_id" @bind-Value="Monster.Monster_Type_ID" class="form-control" />
+                    <ValidationMessage For="() => Monster.Monster_Type_ID" class="text-danger" />
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/monsters" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster? Monster { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Monster = await context.Monster.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Monster is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateMonster()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Monster!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!MonsterExists(Monster!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/monsters");
+    }
+
+    private bool MonsterExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Monster.Any(e => e.ID == id);
+    }
+}

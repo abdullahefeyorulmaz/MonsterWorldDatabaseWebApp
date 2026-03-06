@@ -1,0 +1,54 @@
+﻿@page "/damage_types/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Damage Type Details</h1>
+
+    @if (DamageType is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@DamageType.ID</div>
+
+                <div class="details-label">Type Name</div>
+                <div class="details-value">@DamageType.Type_Name</div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/damage_types/edit?id={DamageType.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/damage_types" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Damage_Type? DamageType { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        DamageType = await context.Damage_Type.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (DamageType is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

@@ -1,0 +1,62 @@
+﻿@page "/abilities/delete"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Delete</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title" style="color:var(--danger-color)">Delete Ability</h1>
+    <p>Are you sure you want to delete this ability?</p>
+
+    @if (ability is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="border-left: 5px solid var(--danger-color);">
+            <div class="details-list">
+                <div class="details-label">Name</div>
+                <div class="details-value">@ability.Name</div>
+
+                <div class="details-label">Description</div>
+                <div class="details-value">@ability.Description</div>
+            </div>
+
+            <EditForm method="post" Model="ability" OnValidSubmit="DeleteAbility" FormName="delete" Enhance>
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-danger" disabled="@(ability is null)">Yes, Delete</button>
+                    <a href="/abilities" class="btn-action btn-secondary">No, Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    private Ability? ability;
+
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        ability = await context.Ability.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (ability is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeleteAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Ability.Remove(ability!);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/abilities");
+    }
+}

@@ -1,0 +1,45 @@
+﻿@page "/traits/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Trait</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Trait</h1>
+    <p style="color:var(--text-secondary)">Define a new trait for monsters.</p>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="Trait" OnValidSubmit="AddTrait">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="trait_name" class="form-label">Trait Name:</label>
+                <InputText id="trait_name" @bind-Value="Trait.Trait_Name" class="form-control" placeholder="Ex: Underwater Breathing" />
+                <ValidationMessage For="() => Trait.Trait_Name" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/traits" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Trait Trait { get; set; } = new();
+
+    private async Task AddTrait()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Trait.Add(Trait);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/traits");
+    }
+}

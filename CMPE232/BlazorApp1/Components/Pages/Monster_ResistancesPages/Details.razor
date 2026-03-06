@@ -1,0 +1,65 @@
+﻿@page "/monster_resistances/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Resistance Details</h1>
+
+    @if (MonsterResistances is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@MonsterResistances.ID</div>
+
+                <div class="details-label">Monster</div>
+                <div class="details-value">
+                    @MonsterResistances.Monster?.Name
+                </div>
+
+                <div class="details-label">Resistance Type</div>
+                <div class="details-value" style="font-weight:bold; color:var(--primary-color)">
+                    @MonsterResistances.Damage_Type?.Type_Name
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/monster_resistances/edit?id={MonsterResistances.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/monster_resistances" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster_Resistances? MonsterResistances { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        MonsterResistances = await context.Monster_Resistances
+            .Include(m => m.Monster)
+            .Include(d => d.Damage_Type)
+            .FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (MonsterResistances is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

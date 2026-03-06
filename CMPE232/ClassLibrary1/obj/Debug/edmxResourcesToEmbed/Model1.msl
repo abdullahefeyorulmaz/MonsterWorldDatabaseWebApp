@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MonsterDBModelStoreContainer" CdmEntityContainer="MonsterDBEntities">
+    <EntitySetMapping Name="Abilities">
+      <EntityTypeMapping TypeName="MonsterDBModel.Ability">
+        <MappingFragment StoreEntitySet="Ability">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Damage_Type">
+      <EntityTypeMapping TypeName="MonsterDBModel.Damage_Type">
+        <MappingFragment StoreEntitySet="Damage_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitats">
+      <EntityTypeMapping TypeName="MonsterDBModel.Habitat">
+        <MappingFragment StoreEntitySet="Habitat">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Habitat_Name" ColumnName="Habitat_Name" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loots">
+      <EntityTypeMapping TypeName="MonsterDBModel.Loot">
+        <MappingFragment StoreEntitySet="Loot">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Loot_Name" ColumnName="Loot_Name" />
+          <ScalarProperty Name="Rarity" ColumnName="Rarity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monsters">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster">
+        <MappingFragment StoreEntitySet="Monster">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Challenge_Rating" ColumnName="Challenge_Rating" />
+          <ScalarProperty Name="Monster_Type_ID" ColumnName="Monster_Type_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Abilities">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Abilities">
+        <MappingFragment StoreEntitySet="Monster_Abilities">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+          <ScalarProperty Name="Ability_ID" ColumnName="Ability_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Habitat_Loot">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Habitat_Loot">
+        <MappingFragment StoreEntitySet="Monster_Habitat_Loot">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+          <ScalarProperty Name="Habitat_ID" ColumnName="Habitat_ID" />
+          <ScalarProperty Name="Loot_ID" ColumnName="Loot_ID" />
+          <ScalarProperty Name="Drop_Rate" ColumnName="Drop_Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Resistances">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Resistances">
+        <MappingFragment StoreEntitySet="Monster_Resistances">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+          <ScalarProperty Name="DamageType_ID" ColumnName="DamageType_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Traits">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Traits">
+        <MappingFragment StoreEntitySet="Monster_Traits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+          <ScalarProperty Name="Trait_ID" ColumnName="Trait_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Type">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Type">
+        <MappingFragment StoreEntitySet="Monster_Type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monster_Weaknesses">
+      <EntityTypeMapping TypeName="MonsterDBModel.Monster_Weaknesses">
+        <MappingFragment StoreEntitySet="Monster_Weaknesses">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Monster_ID" ColumnName="Monster_ID" />
+          <ScalarProperty Name="DamageType_ID" ColumnName="DamageType_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Traits">
+      <EntityTypeMapping TypeName="MonsterDBModel.Trait">
+        <MappingFragment StoreEntitySet="Trait">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Trait_Name" ColumnName="Trait_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

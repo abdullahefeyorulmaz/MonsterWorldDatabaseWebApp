@@ -1,0 +1,50 @@
+﻿@page "/habitats/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Habitat</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Habitat</h1>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="Habitat" OnValidSubmit="AddHabitat">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="name" class="form-label">Habitat Name:</label>
+                <InputText id="name" @bind-Value="Habitat.Habitat_Name" class="form-control" placeholder="Ex: Volcanic Cave" />
+                <ValidationMessage For="() => Habitat.Habitat_Name" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label for="region" class="form-label">Region:</label>
+                <InputText id="region" @bind-Value="Habitat.Region" class="form-control" placeholder="Ex: Southern Mountains" />
+                <ValidationMessage For="() => Habitat.Region" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/habitats" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Habitat Habitat { get; set; } = new();
+
+    private async Task AddHabitat()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Habitat.Add(Habitat);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/habitats");
+    }
+}

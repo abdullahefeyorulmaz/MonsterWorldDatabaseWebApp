@@ -1,0 +1,44 @@
+﻿@page "/damage_types/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Damage Type</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Damage Type</h1>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="DamageType" OnValidSubmit="AddDamageType">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="type_name" class="form-label">Type Name:</label>
+                <InputText id="type_name" @bind-Value="DamageType.Type_Name" class="form-control" placeholder="Ex: Fire, Ice, Acid" />
+                <ValidationMessage For="() => DamageType.Type_Name" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/damage_types" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Damage_Type DamageType { get; set; } = new();
+
+    private async Task AddDamageType()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Damage_Type.Add(DamageType);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/damage_types");
+    }
+}

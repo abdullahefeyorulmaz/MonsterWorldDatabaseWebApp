@@ -1,0 +1,305 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorApp1
+build_property.RootNamespace = BlazorApp1
+build_property.ProjectDir = C:\Users\Pc\source\repos\CMPE232\BlazorApp1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Pc\source\repos\CMPE232\BlazorApp1
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/AbilityPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYmlsaXR5UGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/AbilityPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYmlsaXR5UGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/AbilityPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYmlsaXR5UGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/AbilityPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYmlsaXR5UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/AbilityPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYmlsaXR5UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Damage_TypePages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYW1hZ2VfVHlwZVBhZ2VzXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Damage_TypePages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYW1hZ2VfVHlwZVBhZ2VzXERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Damage_TypePages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYW1hZ2VfVHlwZVBhZ2VzXERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Damage_TypePages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYW1hZ2VfVHlwZVBhZ2VzXEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Damage_TypePages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYW1hZ2VfVHlwZVBhZ2VzXEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/HabitatPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGF0UGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/HabitatPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGF0UGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/HabitatPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGF0UGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/HabitatPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGF0UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/HabitatPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIYWJpdGF0UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/LootPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb290UGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/LootPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb290UGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/LootPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb290UGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/LootPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb290UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/LootPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb290UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/MonsterPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyUGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/MonsterPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyUGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/MonsterPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyUGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/MonsterPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyUGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/MonsterPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyUGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_AbilityPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0FiaWxpdHlQYWdlc1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_AbilityPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0FiaWxpdHlQYWdlc1xEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_AbilityPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0FiaWxpdHlQYWdlc1xEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_AbilityPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0FiaWxpdHlQYWdlc1xFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_AbilityPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0FiaWxpdHlQYWdlc1xJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_Habitat_LootPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0hhYml0YXRfTG9vdFBhZ2VzXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_Habitat_LootPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0hhYml0YXRfTG9vdFBhZ2VzXERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_Habitat_LootPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0hhYml0YXRfTG9vdFBhZ2VzXERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_Habitat_LootPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0hhYml0YXRfTG9vdFBhZ2VzXEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_Habitat_LootPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX0hhYml0YXRfTG9vdFBhZ2VzXEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_ResistancesPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1Jlc2lzdGFuY2VzUGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_ResistancesPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1Jlc2lzdGFuY2VzUGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_ResistancesPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1Jlc2lzdGFuY2VzUGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_ResistancesPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1Jlc2lzdGFuY2VzUGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_ResistancesPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1Jlc2lzdGFuY2VzUGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TraitPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1RyYWl0UGFnZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TraitPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1RyYWl0UGFnZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TraitPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1RyYWl0UGFnZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TraitPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1RyYWl0UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TraitPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1RyYWl0UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TypePages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1R5cGVQYWdlc1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TypePages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1R5cGVQYWdlc1xEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TypePages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1R5cGVQYWdlc1xEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TypePages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1R5cGVQYWdlc1xFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_TypePages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1R5cGVQYWdlc1xJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_WeaknessesPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1dlYWtuZXNzZXNQYWdlc1xDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_WeaknessesPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1dlYWtuZXNzZXNQYWdlc1xEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_WeaknessesPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1dlYWtuZXNzZXNQYWdlc1xEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_WeaknessesPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1dlYWtuZXNzZXNQYWdlc1xFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Monster_WeaknessesPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb25zdGVyX1dlYWtuZXNzZXNQYWdlc1xJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/TraitPages/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFpdFBhZ2VzXENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/TraitPages/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFpdFBhZ2VzXERlbGV0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/TraitPages/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFpdFBhZ2VzXERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/TraitPages/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFpdFBhZ2VzXEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/TraitPages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFpdFBhZ2VzXEluZGV4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-j65y7q72mt
+
+[C:/Users/Pc/source/repos/CMPE232/BlazorApp1/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-5bndfk4shp

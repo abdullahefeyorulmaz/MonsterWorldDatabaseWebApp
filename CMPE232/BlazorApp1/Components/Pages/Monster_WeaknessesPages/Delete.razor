@@ -1,0 +1,68 @@
+﻿@page "/monster_weaknesses/delete"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Delete</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title" style="color:var(--danger-color)">Delete Weakness</h1>
+    <p>Are you sure you want to delete this weakness rule?</p>
+
+    @if (MonsterWeaknesses is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="border-left: 5px solid var(--danger-color);">
+            <div class="details-list">
+
+                <div class="details-label">Monster</div>
+                <div class="details-value">@MonsterWeaknesses.Monster?.Name</div>
+
+                <div class="details-label">Weakness Type</div>
+                <div class="details-value">@MonsterWeaknesses.Damage_Type?.Type_Name</div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button @onclick="DeleteMonsterWeaknesses" class="btn-action btn-danger">Yes, Delete</button>
+                <a href="/monster_weaknesses" class="btn-action btn-secondary">No, Cancel</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster_Weaknesses? MonsterWeaknesses { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        MonsterWeaknesses = await context.Monster_Weaknesses
+            .Include(m => m.Monster)
+            .Include(d => d.Damage_Type)
+            .FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (MonsterWeaknesses is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task DeleteMonsterWeaknesses()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Monster_Weaknesses.Remove(MonsterWeaknesses!);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/monster_weaknesses");
+    }
+}

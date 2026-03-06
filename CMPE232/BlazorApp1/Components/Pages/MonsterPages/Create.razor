@@ -1,0 +1,59 @@
+﻿@page "/monsters/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Monster</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Monster</h1>
+    <p style="color:var(--text-secondary)">Add something scary...</p>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="Monster" OnValidSubmit="AddMonster">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label for="name" class="form-label">Monster Name:</label>
+                <InputText id="name" @bind-Value="Monster.Name" class="form-control" placeholder="Ex: Ancient Red Dragon" />
+                <ValidationMessage For="() => Monster.Name" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label for="challenge_rating" class="form-label">Challenge Rating (CR):</label>
+                <InputNumber id="challenge_rating" @bind-Value="Monster.Challenge_Rating" class="form-control" />
+                <ValidationMessage For="() => Monster.Challenge_Rating" class="text-danger" />
+                <small style="color:var(--text-secondary)">Ex: 5.0 or 0.5</small>
+            </div>
+
+            <div class="form-group">
+                <label for="monster_type_id" class="form-label">Type ID:</label>
+                <InputNumber id="monster_type_id" @bind-Value="Monster.Monster_Type_ID" class="form-control" />
+                <ValidationMessage For="() => Monster.Monster_Type_ID" class="text-danger" />
+                <small style="color:var(--text-secondary)">Enter a valid Type ID from Monster Types.</small>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/monsters" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Monster Monster { get; set; } = new();
+
+    private async Task AddMonster()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Monster.Add(Monster);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/monsters");
+    }
+}

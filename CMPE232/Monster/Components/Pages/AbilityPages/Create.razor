@@ -1,0 +1,49 @@
+﻿@page "/abilities/create"
+@using Microsoft.EntityFrameworkCore
+@using monsterr
+@inject IDbContextFactory<Monster.Data.MonsterContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create</PageTitle>
+
+<h1>Create</h1>
+
+<h2>Ability</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <EditForm method="post" Model="Ability" OnValidSubmit="AddAbility" FormName="create" Enhance>
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert"/>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label> 
+                <InputText id="name" @bind-Value="Ability.Name" class="form-control" /> 
+                <ValidationMessage For="() => Ability.Name" class="text-danger" /> 
+            </div>        
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label> 
+                <InputText id="description" @bind-Value="Ability.Description" class="form-control" /> 
+                <ValidationMessage For="() => Ability.Description" class="text-danger" /> 
+            </div>        
+            <button type="submit" class="btn btn-primary">Create</button>
+        </EditForm>
+    </div>
+</div>
+
+<div>
+    <a href="/abilities">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private Ability Ability { get; set; } = new();
+
+    // To protect from overposting attacks, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task AddAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Ability.Add(Ability);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/abilities");
+    }
+}

@@ -1,0 +1,94 @@
+﻿@page "/abilities/edit"
+@using Microsoft.EntityFrameworkCore
+@using monsterr
+@inject IDbContextFactory<Monster.Data.MonsterContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Edit</PageTitle>
+
+<h1>Edit</h1>
+
+<h2>Ability</h2>
+<hr />
+@if (Ability is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Ability" OnValidSubmit="UpdateAbility" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert"/>
+                <input type="hidden" name="Ability.ID" value="@Ability.ID" />
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <InputText id="name" @bind-Value="Ability.Name" class="form-control" />
+                    <ValidationMessage For="() => Ability.Name" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <InputText id="description" @bind-Value="Ability.Description" class="form-control" />
+                    <ValidationMessage For="() => Ability.Description" class="text-danger" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/abilities">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    [SupplyParameterFromForm]
+    private Ability? Ability { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Ability ??= await context.Ability.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Ability is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more information, see https://learn.microsoft.com/aspnet/core/blazor/forms/#mitigate-overposting-attacks.
+    private async Task UpdateAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Ability!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!AbilityExists(Ability!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/abilities");
+    }
+
+    private bool AbilityExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Ability.Any(e => e.ID == id);
+    }
+}

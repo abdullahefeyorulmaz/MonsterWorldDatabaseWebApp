@@ -1,0 +1,40 @@
+﻿@page "/monster_traits"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ClassLibrary1
+@using BlazorApp1.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp1Context> DbFactory
+
+<PageTitle>Monster Traits</PageTitle>
+
+<div class="page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="page-title">Monster Traits (Özellik Atamaları)</h1>
+        <a href="monster_traits/create" class="btn-action btn-primary">+ Assign New Trait</a>
+    </div>
+
+    <div class="ability-card">
+        <div class="grid-wrapper">
+            <QuickGrid Class="table" Items="context.Monster_Traits.Include(mt => mt.Monster).Include(mt => mt.Trait)">
+
+                <PropertyColumn Property="mt => mt.Monster.Name" Title="Monster" Sortable="true" />
+                <PropertyColumn Property="mt => mt.Trait.Trait_Name" Title="Trait" Sortable="true" />
+
+                <TemplateColumn Context="mt" Title="Actions">
+                    <div class="action-links">
+                        <a href="@($"monster_traits/edit?id={mt.ID}")">Edit</a>
+                        <a href="@($"monster_traits/details?id={mt.ID}")">Details</a>
+                        <a href="@($"monster_traits/delete?id={mt.ID}")" style="color:var(--danger-color)">Delete</a>
+                    </div>
+                </TemplateColumn>
+            </QuickGrid>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BlazorApp1Context context = default!;
+    protected override void OnInitialized() => context = DbFactory.CreateDbContext();
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

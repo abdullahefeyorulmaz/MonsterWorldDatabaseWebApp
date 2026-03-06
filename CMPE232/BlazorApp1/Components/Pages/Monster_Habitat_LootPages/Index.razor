@@ -1,0 +1,43 @@
+﻿@page "/monster_habitat_loots"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ClassLibrary1
+@using BlazorApp1.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp1Context> DbFactory
+
+<PageTitle>Drop Rates</PageTitle>
+
+<div class="page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="page-title">Drop Rates (Ganimet Oranları)</h1>
+        <a href="monster_habitat_loots/create" class="btn-action btn-primary">+ Create New Rule</a>
+    </div>
+
+    <div class="ability-card">
+        <div class="grid-wrapper">
+            <QuickGrid Class="table" Items="context.Monster_Habitat_Loot.Include(m => m.Monster).Include(h => h.Habitat).Include(l => l.Loot)">
+
+                <PropertyColumn Property="mhl => mhl.Monster.Name" Title="Monster" Sortable="true" />
+                <PropertyColumn Property="mhl => mhl.Habitat.Habitat_Name" Title="Habitat" Sortable="true" />
+                <PropertyColumn Property="mhl => mhl.Loot.Loot_Name" Title="Loot (Item)" Sortable="true" />
+
+                <PropertyColumn Property="mhl => mhl.Drop_Rate" Title="Drop Rate" Sortable="true" />
+
+                <TemplateColumn Context="mhl" Title="Actions">
+                    <div class="action-links">
+                        <a href="@($"monster_habitat_loots/edit?id={mhl.ID}")">Edit</a>
+                        <a href="@($"monster_habitat_loots/details?id={mhl.ID}")">Details</a>
+                        <a href="@($"monster_habitat_loots/delete?id={mhl.ID}")" style="color:var(--danger-color)">Delete</a>
+                    </div>
+                </TemplateColumn>
+            </QuickGrid>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BlazorApp1Context context = default!;
+    protected override void OnInitialized() => context = DbFactory.CreateDbContext();
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

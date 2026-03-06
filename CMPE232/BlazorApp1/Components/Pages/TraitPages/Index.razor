@@ -1,0 +1,43 @@
+﻿@page "/traits"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ClassLibrary1
+@using BlazorApp1.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp1Context> DbFactory
+
+<PageTitle>Traits</PageTitle>
+
+<div class="page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="page-title">Traits</h1>
+        <a href="traits/create" class="btn-action btn-primary">+ Create New Trait</a>
+    </div>
+
+    <div class="ability-card">
+        <div class="grid-wrapper">
+            <QuickGrid Class="table" Items="context.Trait">
+                <PropertyColumn Property="t => t.Trait_Name" Title="Trait Name" Sortable="true" />
+
+                <TemplateColumn Context="t" Title="Actions">
+                    <div class="action-links">
+                        <a href="@($"traits/edit?id={t.ID}")">Edit</a>
+                        <a href="@($"traits/details?id={t.ID}")">Details</a>
+                        <a href="@($"traits/delete?id={t.ID}")" style="color:var(--danger-color)">Delete</a>
+                    </div>
+                </TemplateColumn>
+            </QuickGrid>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BlazorApp1Context context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

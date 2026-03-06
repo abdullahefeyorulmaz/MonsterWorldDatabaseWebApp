@@ -1,0 +1,59 @@
+﻿@page "/loots/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Loot Details</h1>
+
+    @if (Loot is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@Loot.ID</div>
+
+                <div class="details-label">Loot Name</div>
+                <div class="details-value">@Loot.Loot_Name</div>
+
+                <div class="details-label">Rarity</div>
+                <div class="details-value">
+                    <span style="font-weight:bold; color:var(--primary-color)">@Loot.Rarity</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/loots/edit?id={Loot.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/loots" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Loot? Loot { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        Loot = await context.Loot.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Loot is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

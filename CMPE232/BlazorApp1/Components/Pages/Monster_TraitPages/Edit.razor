@@ -1,0 +1,107 @@
+﻿@page "/monster_traits/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit Assignment</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Trait Assignment</h1>
+
+    @if (MonsterTrait is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="MonsterTrait" OnValidSubmit="UpdateMonsterTrait">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@MonsterTrait.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Monster:</label>
+                    <InputSelect @bind-Value="MonsterTrait.Monster_ID" class="form-control">
+                        @foreach (var m in MonstersList)
+                        {
+                            <option value="@m.ID">@m.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Trait:</label>
+                    <InputSelect @bind-Value="MonsterTrait.Trait_ID" class="form-control">
+                        @foreach (var t in TraitsList)
+                        {
+                            <option value="@t.ID">@t.Trait_Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/monster_traits" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster_Traits? MonsterTrait { get; set; }
+
+    private List<Monster> MonstersList = new();
+    private List<Trait> TraitsList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        // Veriyi çekerken Monster_Traits kullanıyoruz
+        MonsterTrait = await context.Monster_Traits.FirstOrDefaultAsync(m => m.ID == ID);
+
+        MonstersList = await context.Monster.OrderBy(m => m.Name).ToListAsync();
+        TraitsList = await context.Trait.OrderBy(t => t.Trait_Name).ToListAsync();
+
+        if (MonsterTrait is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateMonsterTrait()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(MonsterTrait!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!context.Monster_Traits.Any(e => e.ID == MonsterTrait!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+        NavigationManager.NavigateTo("/monster_traits");
+    }
+}

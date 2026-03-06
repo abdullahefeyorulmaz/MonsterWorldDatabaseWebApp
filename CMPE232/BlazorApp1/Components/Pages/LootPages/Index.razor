@@ -1,0 +1,44 @@
+﻿@page "/loots"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ClassLibrary1
+@using BlazorApp1.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp1Context> DbFactory
+
+<PageTitle>Loot</PageTitle>
+
+<div class="page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4" style="display:flex; justify-content:space-between; align-items:center;">
+        <h1 class="page-title">Loot</h1>
+        <a href="loots/create" class="btn-action btn-primary">+ Create New</a>
+    </div>
+
+    <div class="ability-card">
+        <div class="grid-wrapper">
+            <QuickGrid Class="table" Items="context.Loot">
+                <PropertyColumn Property="l => l.Loot_Name" Title="Loot Name" Sortable="true" />
+                <PropertyColumn Property="l => l.Rarity" Title="Rarity" Sortable="true" />
+
+                <TemplateColumn Context="l" Title="Actions">
+                    <div class="action-links">
+                        <a href="@($"loots/edit?id={l.ID}")">Edit</a>
+                        <a href="@($"loots/details?id={l.ID}")">Details</a>
+                        <a href="@($"loots/delete?id={l.ID}")" style="color:var(--danger-color)">Delete</a>
+                    </div>
+                </TemplateColumn>
+            </QuickGrid>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BlazorApp1Context context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

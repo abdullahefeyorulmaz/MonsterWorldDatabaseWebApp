@@ -1,0 +1,96 @@
+﻿@page "/monster_habitat_loots/create"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Create Drop Rule</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Create New Drop Rule</h1>
+    <p style="color:var(--text-secondary)">Select from lists, no more IDs!</p>
+
+    <div class="ability-card" style="max-width: 600px;">
+        <EditForm Model="MonsterHabitatLoot" OnValidSubmit="AddMonsterHabitatLoot">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" role="alert" />
+
+            <div class="form-group">
+                <label class="form-label">Monster:</label>
+                <InputSelect @bind-Value="MonsterHabitatLoot.Monster_ID" class="form-control">
+                    <option value="0">-- Select a Monster --</option>
+                    @foreach (var m in MonstersList)
+                    {
+                        <option value="@m.ID">@m.Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => MonsterHabitatLoot.Monster_ID" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Habitat:</label>
+                <InputSelect @bind-Value="MonsterHabitatLoot.Habitat_ID" class="form-control">
+                    <option value="0">-- Select a Habitat --</option>
+                    @foreach (var h in HabitatsList)
+                    {
+                        <option value="@h.ID">@h.Habitat_Name</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => MonsterHabitatLoot.Habitat_ID" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Loot (Item):</label>
+                <InputSelect @bind-Value="MonsterHabitatLoot.Loot_ID" class="form-control">
+                    <option value="0">-- Select Loot --</option>
+                    @foreach (var l in LootList)
+                    {
+                        <option value="@l.ID">@l.Loot_Name (@l.Rarity)</option>
+                    }
+                </InputSelect>
+                <ValidationMessage For="() => MonsterHabitatLoot.Loot_ID" class="text-danger" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Drop Rate (0.00 - 1.00):</label>
+                <InputNumber @bind-Value="MonsterHabitatLoot.Drop_Rate" class="form-control" step="0.01" />
+                <ValidationMessage For="() => MonsterHabitatLoot.Drop_Rate" class="text-danger" />
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <button type="submit" class="btn-action btn-primary">Create</button>
+                <a href="/monster_habitat_loots" class="btn-action btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    public Monster_Habitat_Loot MonsterHabitatLoot { get; set; } = new();
+
+    // Listeleri tutacak değişkenler
+    private List<Monster> MonstersList = new();
+    private List<Habitat> HabitatsList = new();
+    private List<Loot> LootList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        // Veritabanından listeleri çekip dropdown'ları dolduruyoruz
+        MonstersList = await context.Monster.OrderBy(m => m.Name).ToListAsync();
+        HabitatsList = await context.Habitat.OrderBy(h => h.Habitat_Name).ToListAsync();
+        LootList = await context.Loot.OrderBy(l => l.Loot_Name).ToListAsync();
+    }
+
+    private async Task AddMonsterHabitatLoot()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Monster_Habitat_Loot.Add(MonsterHabitatLoot);
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/monster_habitat_loots");
+    }
+}

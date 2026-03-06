@@ -1,0 +1,98 @@
+﻿@page "/abilities/edit"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Edit Ability</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Edit Ability</h1>
+
+    @if (Ability is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card" style="max-width: 600px;">
+            <EditForm Model="Ability" OnValidSubmit="UpdateAbility">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+
+                <div class="form-group">
+                    <label class="form-label" style="color:var(--text-secondary)">ID (Read-only):</label>
+                    <input type="text" class="form-control" value="@Ability.ID" disabled readonly style="background-color: #2a2a2a; color: #888;" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Name:</label>
+                    <InputText @bind-Value="Ability.Name" class="form-control" />
+                    <ValidationMessage For="() => Ability.Name" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description:</label>
+                    <InputTextArea @bind-Value="Ability.Description" class="form-control" />
+                    <ValidationMessage For="() => Ability.Description" class="text-danger" />
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                    <button type="submit" class="btn-action btn-primary">Save</button>
+                    <a href="/abilities" class="btn-action btn-secondary">Cancel</a>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Ability? Ability { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        // NOT: Eğer hata alırsan 'context.Ability' yerine 'context.Abilities' dene.
+        Ability = await context.Ability.FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (Ability is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    private async Task UpdateAbility()
+    {
+        using var context = DbFactory.CreateDbContext();
+        context.Attach(Ability!).State = EntityState.Modified;
+
+        try
+        {
+            await context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!AbilityExists(Ability!.ID))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/abilities");
+    }
+
+    private bool AbilityExists(int id)
+    {
+        using var context = DbFactory.CreateDbContext();
+        return context.Ability.Any(e => e.ID == id);
+    }
+}

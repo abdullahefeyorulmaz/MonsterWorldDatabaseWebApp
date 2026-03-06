@@ -1,0 +1,77 @@
+﻿@page "/monster_habitat_loots/details"
+@using Microsoft.EntityFrameworkCore
+@using ClassLibrary1
+@using Microsoft.AspNetCore.Components.Web
+@inject IDbContextFactory<BlazorApp1.Data.BlazorApp1Context> DbFactory
+@inject NavigationManager NavigationManager
+
+@rendermode RenderMode.InteractiveServer
+
+<PageTitle>Details</PageTitle>
+
+<div class="page-container">
+    <h1 class="page-title">Drop Rate Details</h1>
+
+    @if (MonsterHabitatLoot is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="ability-card">
+            <div class="details-list">
+                <div class="details-label">ID</div>
+                <div class="details-value">@MonsterHabitatLoot.ID</div>
+
+                <div class="details-label">Monster</div>
+                <div class="details-value">
+                    @MonsterHabitatLoot.Monster?.Name <span style="color:#666; font-size:0.8em;">(ID: @MonsterHabitatLoot.Monster_ID)</span>
+                </div>
+
+                <div class="details-label">Habitat</div>
+                <div class="details-value">
+                    @MonsterHabitatLoot.Habitat?.Habitat_Name
+                </div>
+
+                <div class="details-label">Loot (Item)</div>
+                <div class="details-value">
+                    @MonsterHabitatLoot.Loot?.Loot_Name
+                </div>
+
+                <div class="details-label">Drop Rate</div>
+                <div class="details-value" style="font-weight:bold; color:var(--primary-color)">
+                    @MonsterHabitatLoot.Drop_Rate
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; display:flex; gap: 10px;">
+                <a href="@($"/monster_habitat_loots/edit?id={MonsterHabitatLoot.ID}")" class="btn-action btn-primary">Edit</a>
+                <a href="/monster_habitat_loots" class="btn-action btn-secondary">Back to List</a>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    private int ID { get; set; }
+
+    public Monster_Habitat_Loot? MonsterHabitatLoot { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        // Include ile bağlı verileri de çekiyoruz
+        MonsterHabitatLoot = await context.Monster_Habitat_Loot
+            .Include(m => m.Monster)
+            .Include(h => h.Habitat)
+            .Include(l => l.Loot)
+            .FirstOrDefaultAsync(m => m.ID == ID);
+
+        if (MonsterHabitatLoot is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

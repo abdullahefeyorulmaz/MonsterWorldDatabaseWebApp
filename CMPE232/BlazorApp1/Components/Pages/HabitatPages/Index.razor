@@ -1,0 +1,44 @@
+﻿@page "/habitats"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using ClassLibrary1
+@using BlazorApp1.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp1Context> DbFactory
+
+<PageTitle>Habitats</PageTitle>
+
+<div class="page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="page-title">Habitats</h1>
+        <a href="habitats/create" class="btn-action btn-primary">+ Create New</a>
+    </div>
+
+    <div class="ability-card">
+        <div class="grid-wrapper">
+            <QuickGrid Class="table" Items="context.Habitat">
+                <PropertyColumn Property="h => h.Habitat_Name" Title="Habitat Name" Sortable="true" />
+                <PropertyColumn Property="h => h.Region" Title="Region" Sortable="true" />
+
+                <TemplateColumn Context="h" Title="Actions">
+                    <div class="action-links">
+                        <a href="@($"habitats/edit?id={h.ID}")">Edit</a>
+                        <a href="@($"habitats/details?id={h.ID}")">Details</a>
+                        <a href="@($"habitats/delete?id={h.ID}")" style="color:var(--danger-color)">Delete</a>
+                    </div>
+                </TemplateColumn>
+            </QuickGrid>
+        </div>
+    </div>
+</div>
+
+@code {
+    private BlazorApp1Context context = default!;
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
